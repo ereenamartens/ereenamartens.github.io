@@ -237,13 +237,19 @@
                 </p>
             </div>
 
-            <!-- Framework Image -->
-            <div class="w-full shadow-lg border border-stone-200">
+            <!-- Framework Image with Lightbox Trigger -->
+            <div class="w-full shadow-lg border border-stone-200 cursor-pointer group relative overflow-hidden" onclick="openModal('Images/CFramework.png')">
                 <img 
                     src="Images/CFramework.png" 
                     alt="The Consciousness Framework Map" 
-                    class="w-full h-auto object-cover"
+                    class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 >
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div class="bg-white/90 p-3 rounded-full shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                        <i data-lucide="maximize-2" class="w-6 h-6 text-stone-800"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-4 right-4 bg-black/50 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">Click to enlarge</div>
             </div>
         </div>
     </section>
@@ -348,6 +354,16 @@
         </div>
     </footer>
 
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 z-[60] bg-black/95 hidden flex items-center justify-center p-4" onclick="closeModal()">
+        <button class="absolute top-6 right-6 text-white/70 hover:text-white focus:outline-none transition-colors">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <div class="relative max-w-full max-h-full" onclick="event.stopPropagation()">
+            <img id="modalImage" src="" alt="Enlarged View" class="max-w-full max-h-[90vh] object-contain shadow-2xl rounded-sm">
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script>
         // Initialize Icons
@@ -358,6 +374,35 @@
         const menu = document.getElementById('mobile-menu');
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
+        });
+
+        // Modal Logic
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = imageSrc;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            
+            // Re-initialize icons (specifically for the X button inside modal)
+            lucide.createIcons();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+            // Clear src to prevent flash of old image on next open
+            setTimeout(() => {
+                document.getElementById('modalImage').src = "";
+            }, 200);
+        }
+        
+        // Close on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
         });
 
         // Contact Form Logic
