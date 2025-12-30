@@ -309,18 +309,8 @@
                         <input type="text" id="lastName" class="w-full bg-stone-50 border border-stone-200 p-3 focus:outline-none focus:border-sage-500 transition-colors">
                     </div>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-bold" for="email">Email Address <span class="text-red-400">*</span></label>
-                        <input type="email" id="email" required class="w-full bg-stone-50 border border-stone-200 p-3 focus:outline-none focus:border-sage-500 transition-colors">
-                        <p id="emailError" class="text-red-500 text-xs mt-1 hidden">Please enter a valid email address.</p>
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-bold" for="phone">Phone Number</label>
-                        <input type="tel" id="phone" class="w-full bg-stone-50 border border-stone-200 p-3 focus:outline-none focus:border-sage-500 transition-colors">
-                    </div>
-                </div>
+                
+                <!-- Removed Email and Phone Fields -->
 
                 <div>
                     <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-bold" for="subject">Subject <span class="text-red-400">*</span></label>
@@ -346,11 +336,8 @@
                 <span class="font-serif text-xl text-stone-200 block mb-2">The Serenity Architect</span>
                 <p class="text-sm">© <script>document.write(new Date().getFullYear())</script> Ereena Martens. All rights reserved.</p>
             </div>
-            <div class="flex space-x-6">
-               <a href="#" class="hover:text-white transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-               <a href="#" class="hover:text-white transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-               <a href="mailto:ereena@theserenityarchitect.com" class="hover:text-white transition"><i data-lucide="mail" class="w-5 h-5"></i></a>
-            </div>
+            <!-- Removed Social Media Icons -->
+            <div></div>
         </div>
     </footer>
 
@@ -411,25 +398,13 @@
 
             const firstName = document.getElementById('firstName').value.trim();
             const lastName = document.getElementById('lastName').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const phone = document.getElementById('phone').value.trim();
             const subject = document.getElementById('subject').value.trim();
             const message = document.getElementById('message').value.trim();
-            const emailError = document.getElementById('emailError');
-
-            // Regex for Email Validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            if (!emailRegex.test(email)) {
-                emailError.classList.remove('hidden');
-                return;
-            } else {
-                emailError.classList.add('hidden');
-            }
 
             // Construct Mailto Link
             const fullName = lastName ? `${firstName} ${lastName}` : firstName;
-            const mailtoBody = `Name: ${fullName}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+            // Removed Email and Phone from mailtoBody
+            const mailtoBody = `Name: ${fullName}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
             const mailtoLink = `mailto:ereena@theserenityarchitect.com?subject=${encodeURIComponent(subject)}&body=${mailtoBody}`;
 
             // Open Mail Client
