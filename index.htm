@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Serenity Architect | Ereena Martens</title>
+    <meta name="description" content="Empowering you to confidently claim your space and reclaim your authentic self.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            800: '#292524',
+                            900: '#1c1917',
+                        },
+                        sage: {
+                            100: '#f0f4f1',
+                            500: '#8da399',
+                            700: '#4a5d55',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f5f5f4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d6d3d1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a8a29e;
+        }
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased selection:bg-sage-200 selection:text-stone-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-stone-50/90 backdrop-blur-md z-50 border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-serif text-2xl tracking-wide text-stone-900">The Serenity Architect</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-stone-600">
+                <a href="#mission" class="hover:text-stone-900 transition-colors">Mission</a>
+                <a href="#books" class="hover:text-stone-900 transition-colors">Books</a>
+                <a href="#about" class="hover:text-stone-900 transition-colors">About</a>
+                <a href="#contact" class="hover:text-stone-900 transition-colors">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-stone-600 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-100 border-t border-stone-200 p-4">
+            <div class="flex flex-col space-y-4 text-center">
+                <a href="#mission" class="block text-stone-600 hover:text-stone-900">Mission</a>
+                <a href="#books" class="block text-stone-600 hover:text-stone-900">Books</a>
+                <a href="#about" class="block text-stone-600 hover:text-stone-900">About</a>
+                <a href="#contact" class="block text-stone-600 hover:text-stone-900">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 bg-sage-100/30">
+        <div class="max-w-4xl mx-auto text-center fade-in-up">
+            <h1 class="font-serif text-5xl md:text-7xl mb-6 text-stone-900 leading-tight">
+                Architecting <br/><span class="italic text-sage-700">Serenity</span>
+            </h1>
+            <p class="text-lg md:text-xl text-stone-600 max-w-2xl mx-auto leading-relaxed font-light">
+                Empowering you to confidently claim your space and reclaim your authentic self through the journey of consciousness.
+            </p>
+            <div class="mt-10">
+                <a href="#books" class="inline-block px-8 py-3 bg-stone-800 text-stone-50 font-sans tracking-widest text-sm uppercase hover:bg-stone-700 transition-colors duration-300">
+                    Explore My Books
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-20 px-6 bg-white">
+        <div class="max-w-3xl mx-auto text-center">
+            <i data-lucide="compass" class="w-10 h-10 mx-auto text-sage-500 mb-6"></i>
+            <h2 class="font-serif text-3xl md:text-4xl mb-8 text-stone-900">My Mission</h2>
+            <div class="prose prose-stone prose-lg mx-auto text-stone-600 leading-loose">
+                <p>
+                    My mission is to empower you to confidently claim your space and reclaim your authentic self. Through my book series, <span class="font-semibold text-stone-800">“The Consciousness Framework”</span>, I invite you to embark on a journey as I map our conscious and subconscious minds, identifying our stories, uncovering our triggers, limiting beliefs, blocks, and defense mechanisms that hinder our true potential.
+                </p>
+                <p class="mt-4">
+                    I share how these perspectives helped me architect my life and led to profound shifts. It is a magical journey of self-discovery, adventures, varying perspectives, and unexpected friends. Through these, I share the map of how I shift out of survival mode to living with vibrant authenticity and flow.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <section id="books" class="py-24 px-6 bg-stone-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-sage-700 uppercase tracking-widest text-sm font-bold">The Library</span>
+                <h2 class="font-serif text-4xl mt-2 text-stone-900">The Consciousness Framework</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Book 1 -->
+                <div class="bg-white p-8 md:p-12 shadow-sm border border-stone-200 hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+                    <div class="flex-grow">
+                        <div class="h-64 bg-stone-200 mb-8 flex items-center justify-center text-stone-400 italic font-serif">
+                            <!-- Placeholder for Book Cover -->
+                            <div class="text-center">
+                                <i data-lucide="book-open" class="w-12 h-12 mx-auto mb-2"></i>
+                                <span>Book Cover Placeholder</span>
+                            </div>
+                        </div>
+                        <h3 class="font-serif text-2xl mb-2 text-stone-900">Vol I - A Journey Within</h3>
+                        <p class="text-stone-600 mb-6 leading-relaxed">
+                            Join me on my journey of introspection and self discovery through the lens of spirituality. I use the Consciousness Framework that I created as a map for the ride.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 border-t border-stone-100 pt-6">
+                        <p class="text-xs uppercase tracking-widest text-stone-400 mb-4 font-bold">Available Formats</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <a href="https://www.amazon.com/Journey-Within-Introduction-Consciousness-Framework/dp/B0DMPD5JNW" target="_blank" class="text-sm px-4 py-2 border border-stone-300 text-stone-600 hover:bg-stone-50 hover:border-stone-400 transition flex items-center justify-center gap-2">
+                                <i data-lucide="book" class="w-4 h-4"></i> US Paperback
+                            </a>
+                            <a href="https://www.amazon.ca/Journey-Within-Introduction-Consciousness-Framework/dp/B0DMPGQ69C" target="_blank" class="text-sm px-4 py-2 border border-stone-300 text-stone-600 hover:bg-stone-50 hover:border-stone-400 transition flex items-center justify-center gap-2">
+                                <i data-lucide="book" class="w-4 h-4"></i> CA Paperback
+                            </a>
+                            <a href="https://www.amazon.com/dp/B0CXPCV346" target="_blank" class="text-sm px-4 py-2 border border-stone-300 text-stone-600 hover:bg-stone-50 hover:border-stone-400 transition flex items-center justify-center gap-2">
+                                <i data-lucide="tablet" class="w-4 h-4"></i> US Kindle
+                            </a>
+                            <a href="https://www.amazon.ca/dp/B0CXPCV346" target="_blank" class="text-sm px-4 py-2 border border-stone-300 text-stone-600 hover:bg-stone-50 hover:border-stone-400 transition flex items-center justify-center gap-2">
+                                <i data-lucide="tablet" class="w-4 h-4"></i> CA Kindle
+                            </a>
+                            <a href="https://www.amazon.com/dp/B0CXPCV346" target="_blank" class="text-sm px-4 py-2 border border-stone-300 text-stone-600 hover:bg-stone-50 hover:border-stone-400 transition flex items-center justify-center gap-2 col-span-1 sm:col-span-2">
+                                <i data-lucide="headphones" class="w-4 h-4"></i> Audible (US & CA)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 2 -->
+                <div class="bg-white p-8 md:p-12 shadow-sm border border-stone-200 hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+                    <div class="flex-grow">
+                        <div class="h-64 bg-stone-200 mb-8 flex items-center justify-center text-stone-400 italic font-serif">
+                             <!-- Placeholder for Book Cover -->
+                             <div class="text-center">
+                                <i data-lucide="book-open" class="w-12 h-12 mx-auto mb-2"></i>
+                                <span>Book Cover Placeholder</span>
+                            </div>
+                        </div>
+                        <h3 class="font-serif text-2xl mb-2 text-stone-900">Vol II - Embracing Divine Nonchalance</h3>
+                        <p class="text-stone-600 mb-6 leading-relaxed">
+                            Moving up the Consciousness Framework, come along with me as I traverse multidimensionality and work with multiple divine guidance teams at each dimension. A guide from beginner to intermediate stages.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 border-t border-stone-100 pt-6">
+                        <p class="text-xs uppercase tracking-widest text-stone-400 mb-4 font-bold">Available Formats</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <a href="https://www.amazon.com/Embracing-Divine-Nonchalance-Multidimensionality-Consciousness/dp/B0F315J1KG" target="_blank" class="text-sm px-4 py-2 border border-stone-300 text-stone-600 hover:bg-stone-50 hover:border-stone-400 transition flex items-center justify-center gap-2">
+                                <i data-lucide="book" class="w-4 h-4"></i> US Paperback
+                            </a>
+                            <a href="https://www.amazon.ca/Embracing-Divine-Nonchalance-Multidimensionality-Ascended/dp/B0F315J1KG" target="_blank" class="text-sm px-4 py-2 border border-stone-300 text-stone-600 hover:bg-stone-50 hover:border-stone-400 transition flex items-center justify-center gap-2">
+                                <i data-lucide="book" class="w-4 h-4"></i> CA Paperback
+                            </a>
+                            <a href="https://www.amazon.com/Embracing-Divine-Nonchalance-Multidimensionality-Consciousness-ebook/dp/B0F2XHHC93" target="_blank" class="text-sm px-4 py-2 border border-stone-300 text-stone-600 hover:bg-stone-50 hover:border-stone-400 transition flex items-center justify-center gap-2">
+                                <i data-lucide="tablet" class="w-4 h-4"></i> US Kindle
+                            </a>
+                            <a href="https://www.amazon.ca/Embracing-Divine-Nonchalance-Multidimensionality-Consciousness-ebook/dp/B0F2XHHC93" target="_blank" class="text-sm px-4 py-2 border border-stone-300 text-stone-600 hover:bg-stone-50 hover:border-stone-400 transition flex items-center justify-center gap-2">
+                                <i data-lucide="tablet" class="w-4 h-4"></i> CA Kindle
+                            </a>
+                            <a href="https://www.amazon.com/Embracing-Divine-Nonchalance-Multidimensionality-Consciousness-ebook/dp/B0F2XHHC93" target="_blank" class="text-sm px-4 py-2 border border-stone-300 text-stone-600 hover:bg-stone-50 hover:border-stone-400 transition flex items-center justify-center gap-2 col-span-1 sm:col-span-2">
+                                <i data-lucide="headphones" class="w-4 h-4"></i> Audible (US & CA)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-start">
+            <!-- Image Placeholder -->
+            <div class="w-full md:w-1/3 sticky top-24">
+                <div class="aspect-[3/4] bg-sage-100 flex items-center justify-center text-sage-300 italic">
+                    <!-- Replace src with your actual image -->
+                    <div class="text-center p-6">
+                        <i data-lucide="image" class="w-16 h-16 mx-auto mb-4 text-sage-400"></i>
+                        <p class="text-sage-600">Ereena's Photo</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="w-full md:w-2/3">
+                <h2 class="font-serif text-4xl mb-2 text-stone-900">Hi, I’m Ereena Martens</h2>
+                <h3 class="text-sage-700 uppercase tracking-widest text-sm font-bold mb-8">Certified Energy Healer & Serenity Coach</h3>
+                
+                <div class="prose prose-stone text-stone-600 space-y-6 leading-relaxed text-lg">
+                    <p>
+                        I help heal those seeking to take control of their life from overcoming inner conflict, societal conflict, feelings of being stuck, alone and overwhelmed. I help guide you towards your inner peace for a balanced body, mind and spirit.
+                    </p>
+                    <p>
+                        Born in Pakistan and raised in Canada from teenage years and currently living in Calgary Alberta, I underwent rich experiences in cultures, family, friends, education, career and spiritual journey. I am a professional engineer and after spending some years in engineering, I transitioned into enterprise architecture which led me to make strategic technological plans for mid to large size organizations. I have rich experiences navigating and thriving in multitudes of diverse, high-stress, fast-paced environments. I have used intuition as part of my foundational toolset to provide unique perspectives and approaches to my very technical career.
+                    </p>
+                    <p>
+                        During my first awakening I went from experiencing uncontrolled major ups and downs in my life to intentional and deliberate growth. This helped with normalizing the intensity of life experiences that went from things happening to me, to things happening through me. I reached a state of flow and connectedness. 
+                    </p>
+                    <p>
+                        My second awakening led me to abundance and manifestation. Once in a flow state I was able to find my balance and go deep within myself. I used tools like hypnotherapy, meditation and breathwork to address and resolve the root causes of my internal patterns and behaviors. As I would resolve, rewire and create new neural pathways for myself, I would use my energy to create opportunities. I felt a lot of clarity, which got me to my third awakening. 
+                    </p>
+                    <p>
+                        Once I had realized my energetic potential, I felt a heightened sense of connectedness with people around me. I was able to feel the blocks, and get spiritual guidance on how to help clear them. I felt a sense of fulfillment for my soul’s purpose as I helped those that were seeking help with finding their footing in their life and empowering them to find their soul purpose and peace that comes from that alignment and flow.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-sage-50">
+        <div class="max-w-2xl mx-auto bg-white p-8 md:p-12 shadow-lg border-t-4 border-sage-500">
+            <div class="text-center mb-10">
+                <h2 class="font-serif text-3xl text-stone-900 mb-2">Connect with Me</h2>
+                <p class="text-stone-500 font-light">I'd love to hear from you. Fill out the form below to send me an email.</p>
+            </div>
+
+            <form id="contactForm" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-bold" for="firstName">First Name <span class="text-red-400">*</span></label>
+                        <input type="text" id="firstName" required class="w-full bg-stone-50 border border-stone-200 p-3 focus:outline-none focus:border-sage-500 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-bold" for="lastName">Last Name</label>
+                        <input type="text" id="lastName" class="w-full bg-stone-50 border border-stone-200 p-3 focus:outline-none focus:border-sage-500 transition-colors">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-bold" for="email">Email Address <span class="text-red-400">*</span></label>
+                        <input type="email" id="email" required class="w-full bg-stone-50 border border-stone-200 p-3 focus:outline-none focus:border-sage-500 transition-colors">
+                        <p id="emailError" class="text-red-500 text-xs mt-1 hidden">Please enter a valid email address.</p>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-bold" for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="w-full bg-stone-50 border border-stone-200 p-3 focus:outline-none focus:border-sage-500 transition-colors">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-bold" for="subject">Subject <span class="text-red-400">*</span></label>
+                    <input type="text" id="subject" required class="w-full bg-stone-50 border border-stone-200 p-3 focus:outline-none focus:border-sage-500 transition-colors">
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-bold" for="message">Message <span class="text-red-400">*</span></label>
+                    <textarea id="message" rows="5" required class="w-full bg-stone-50 border border-stone-200 p-3 focus:outline-none focus:border-sage-500 transition-colors"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-stone-800 text-white py-4 font-sans uppercase tracking-widest text-sm hover:bg-stone-700 transition-colors duration-300">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-12 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="font-serif text-xl text-stone-200 block mb-2">The Serenity Architect</span>
+                <p class="text-sm">© <script>document.write(new Date().getFullYear())</script> Ereena Martens. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6">
+               <a href="#" class="hover:text-white transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+               <a href="#" class="hover:text-white transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+               <a href="mailto:ereena@theserenityarchitect.com" class="hover:text-white transition"><i data-lucide="mail" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Contact Form Logic
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const emailError = document.getElementById('emailError');
+
+            // Regex for Email Validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                emailError.classList.remove('hidden');
+                return;
+            } else {
+                emailError.classList.add('hidden');
+            }
+
+            // Construct Mailto Link
+            const fullName = lastName ? `${firstName} ${lastName}` : firstName;
+            const mailtoBody = `Name: ${fullName}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+            const mailtoLink = `mailto:ereena@theserenityarchitect.com?subject=${encodeURIComponent(subject)}&body=${mailtoBody}`;
+
+            // Open Mail Client
+            window.location.href = mailtoLink;
+            
+            // Optional: Alert user what's happening
+            alert("Thank you! Your default email client will now open with your message drafted.");
+        });
+    </script>
+</body>
+</html>
